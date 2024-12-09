@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService.Api", "AuthorizationService\AuthorizationService.Api\AuthorizationService.Api.csproj", "{32DC4C5F-9031-4B3B-9A7D-566EE098A149}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthorizationService", "AuthorizationService", "{D8CA8801-FB0C-4529-B7C2-95B82728BCA5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthorizationProducer", "AuthorizationProducer", "{0EEE1DBA-1E7E-4456-B611-B971B03281F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService.Api", "AuthorizationService\AuthorizationService.Api\AuthorizationService.Api.csproj", "{32DC4C5F-9031-4B3B-9A7D-566EE098A149}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService.Application", "AuthorizationService\AuthorizationService.Application\AuthorizationService.Application.csproj", "{FB5262AC-C1B3-4416-BCC1-10188D9AC57F}"
 EndProject
