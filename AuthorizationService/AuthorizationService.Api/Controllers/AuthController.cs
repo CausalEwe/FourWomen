@@ -54,4 +54,20 @@ public class AuthController(IMediator mediator) : ControllerBase
             return StatusCode(500, $"Произошла ошибка при обработке вашего запроса. {ex.Message}");
         }
     }
+
+    [HttpPost("confirm")]
+    public async Task<IActionResult> Confirm(UserConfirmRequest userConfirmRequest)
+    {
+        try
+        {
+            var result = await mediator.Send(
+                new UserConfirmCommand { ConfirmationToken = userConfirmRequest.ConfirmationToken });
+            
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Произошла ошибка при обработке вашего запроса. {ex.Message}");
+        }
+    }
 }
