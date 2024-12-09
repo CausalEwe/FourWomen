@@ -10,9 +10,29 @@ namespace AuthorizationService.Controllers;
 public class AuthController(IMediator mediator) : ControllerBase
 {
     [HttpPost("register")]
-    public async Task<IActionResult> Register()
+    public async Task<IActionResult> Register([FromBody]UserRegisterRequest registerRequest)
     {
-        return Ok();
+        try
+        {
+            var result = await mediator.Send(
+                new UserRegisterCommand
+                {
+                    Username = registerRequest.Username, Password = registerRequest.Password,
+                    Email = registerRequest.Email
+                });
+
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return ex switch
+            {
+                ArgumentException argumentEx => BadRequest(argumentEx.Message),
+                InvalidOperationException invalidOperationEx => BadRequest(invalidOperationEx.Message),
+                UnauthorizedAccessException unauthorizedAccessEx => Unauthorized(unauthorizedAccessEx.Message),
+                _ => StatusCode(500, $"Произошла ошибка при обработке вашего запроса. {ex.Message}")
+            };
+        }
     }
 
     [HttpPost("login")]
