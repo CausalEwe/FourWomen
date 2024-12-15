@@ -2,7 +2,7 @@
 using Grpc.Core;
 using MediatR;
 
-namespace AuthorizationService.Grpc.Services;
+namespace AuthorizationService.Contracts.Services;
 
 public class AuthService(IMediator mediator) : Auth.AuthBase
 {

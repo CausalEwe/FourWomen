@@ -1,5 +1,5 @@
 using AuthorizationService.Application;
-using AuthorizationService.Grpc.Services;
+using AuthorizationService.Contracts.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
