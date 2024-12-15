@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService.Infras
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService.Domain", "AuthorizationService\AuthorizationService.Domain\AuthorizationService.Domain.csproj", "{8D9749FD-141F-469B-A1C8-87BDF0F4C1B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService.Grpc", "AuthorizationService.Grpc\AuthorizationService.Grpc.csproj", "{BDF7ECFC-C8AE-48BF-974F-13734F1B2DD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationService.Grpc", "AuthorizationService\AuthorizationService.Grpc\AuthorizationService.Grpc.csproj", "{BDF7ECFC-C8AE-48BF-974F-13734F1B2DD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
